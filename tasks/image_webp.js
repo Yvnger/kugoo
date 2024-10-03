@@ -6,12 +6,12 @@ const plumber = require('gulp-plumber');
 const bs = require('browser-sync');
 
 module.exports = function webp() {
-    return src('assets/img/**/*.+(png|jpg|jpeg)')
+    return src('dist/img/**/*.+(png|jpg|jpeg)')
         .pipe(plumber())
-        .pipe(changed('assets/img', {
+        .pipe(changed('dist/img', {
             extension: '.webp'
         }))
         .pipe(webpConv())
-        .pipe(multiDest(['src/img', 'assets/img']))
+        .pipe(multiDest(['src/img', 'dist/img']))
         .pipe(bs.stream());
 }

@@ -3,7 +3,7 @@ const bs = require('browser-sync');
 module.exports = function bs_html() {
 	bs.init({
 		server: {
-			baseDir: 'assets/',
+			baseDir: 'dist/',
 			host: '127.0.0.1',
 			index: 'index.html'
 		},
@@ -21,7 +21,7 @@ module.exports = function bs_html() {
 					}
 				});
 			}
-		},	
+		},
 		browser: 'yandex_browser',
 		logPrefix: 'BS-HTML:',
 		logLevel: 'info',

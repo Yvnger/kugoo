@@ -5,6 +5,6 @@ const bs = require('browser-sync');
 module.exports = function dev_js() {
     return src(['src/ts/main.ts'])
         .pipe(webpack(require('../webpack.config.js')))
-        .pipe(dest('assets/js/'))
+        .pipe(dest('dist/js/'))
         .pipe(bs.stream())
 }

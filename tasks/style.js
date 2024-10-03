@@ -31,6 +31,6 @@ module.exports = function style() {
 		}))
 		.pipe(concat('style.min.css'))
 		.pipe(map.write('../sourcemaps/'))
-		.pipe(dest('assets/css/'))
+		.pipe(dest('dist/css/'))
 		.pipe(bs.stream())
 }

@@ -28,6 +28,6 @@ module.exports = {
   mode: 'development', // Или 'production' в зависимости от вашего окружения
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'assets/js')
+    path: path.resolve(__dirname, 'dist/js')
   },
 };

@@ -6,21 +6,21 @@ const bs = require('browser-sync');
 
 module.exports = function ttf(done) {
   src('src/fonts/**/*.ttf')
-    .pipe(changed('assets/fonts', {
+    .pipe(changed('dist/fonts', {
       extension: '.woff2',
       hasChanged: changed.compareLastModifiedTime
     }))
     .pipe(ttf2woff2())
-    .pipe(dest('assets/fonts'))
+    .pipe(dest('dist/fonts'))
     .pipe(bs.stream())
 
   src('src/fonts/**/*.ttf')
-    .pipe(changed('assets/fonts', {
+    .pipe(changed('dist/fonts', {
       extension: 'woff',
       hasChanged: changed.compareLastModifiedTime
     }))
     .pipe(ttf2woff())
-    .pipe(dest('assets/fonts'))
+    .pipe(dest('dist/fonts'))
     .pipe(bs.stream())
   done();
 }

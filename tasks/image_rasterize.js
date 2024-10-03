@@ -7,7 +7,7 @@ const bs = require('browser-sync');
 
 module.exports = function rastr() {
     return src('src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
-        .pipe(changed('assets/img'))
+        .pipe(changed('dist/img'))
         .pipe(imagemin({
             interlaced: true,
             progressive: true,
@@ -29,6 +29,6 @@ module.exports = function rastr() {
                 imagemin.optipng(),
                 imagemin.svgo()
             ],),)
-        .pipe(dest('assets/img'))
+        .pipe(dest('dist/img'))
         .pipe(bs.stream())
 }

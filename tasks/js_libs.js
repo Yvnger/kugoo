@@ -13,7 +13,7 @@ module.exports = function libs_js(done) {
             .pipe(uglify())
             .pipe(concat('libs.min.js'))
             .pipe(map.write('../sourcemaps'))
-            .pipe(dest('assets/js/'))
+            .pipe(dest('dist/js/'))
             .pipe(bs.stream());
     else {
         return done(console.log(chalk.redBright('No added JS plugins')));

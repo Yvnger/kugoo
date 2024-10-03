@@ -5,6 +5,6 @@ const bs = require('browser-sync');
 module.exports = function php() {
     return src('src/**/*.php')
         .pipe(include())
-        .pipe(dest('assets'))
+        .pipe(dest('dist'))
         .pipe(bs.stream())
 }
