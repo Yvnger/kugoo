@@ -1,20 +1,20 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-        min-width: 320px;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-font-size: $base-font-size;
+  min-width: 320px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: $base-font-size;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 a {
-    @include focusLink;
+  @include focusLink;
 }
