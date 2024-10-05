@@ -1,0 +1,55 @@
+<div class="header__catatalog catalog-dropdown">
+  <button class="btn btn--fill btn--purple header__catalog-btn catalog-dropdown__btn">
+    <div class="header__catalog-hamburger hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    Каталог
+  </button>
+  <div class="catalog-dropdown__wrap">
+    <div class="catalog-dropdown__body">
+      <div class="catalog-dropdown__categories">
+        <ul class="catalog-dropdown__categories-list">
+          @@loop('./catalog-dropdown-category-item.html', [
+          {"title": "Электросамокаты", "icon_id": "electric_scooter"},
+          {"title": "Электроскутеры", "icon_id": "electric_moped"},
+          {"title": "Электровелосипеды", "icon_id": "electric_bike"},
+          {"title": "Робот-пылесосы", "icon_id": "robot_vc"},
+          {"title": "Весы", "icon_id": "weighing_scale"},
+          ])
+        </ul>
+      </div>
+
+      <div class="catalog-dropdown__attributes">
+        <div class="catalog-dropdown__attributes-wrap">
+          <span class="catalog-dropdown__attributes-title">Особенности</span>
+
+          <ul class="catalog-dropdown__attributes-list">
+            @@loop('./catalog-dropdown-attribute-item.html', [
+            {"title": "Внедорожный"},
+            {"title": "Городской"},
+            {"title": "Зимний"},
+            {"title": "С сиденьем"},
+            {"title": "Без сиденья"}
+            ])
+          </ul>
+        </div>
+
+        <div class="catalog-dropdown__attributes-wrap">
+          <span class="catalog-dropdown__attributes-title">Для кого</span>
+
+          <ul class="catalog-dropdown__attributes-list">
+            @@loop('./catalog-dropdown-attribute-item.html', [
+            {"title": "Для детей и подростков"},
+            {"title": "Для взрослых"},
+            {"title": "Для пенсионеров"}
+            ])
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,154 @@
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  font-family: $heading-font-family;
+
+  @include tablet {
+    &--opened {
+      bottom: 0;
+    }
+  }
+
+  &__top-bar {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__middle {
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      padding-top: 30px;
+      padding-bottom: 35px;
+
+      @include tablet {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+
+    &-link {
+      width: fit-content;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 30px;
+      text-decoration: none;
+      color: $black;
+
+      @include tablet {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__catalog {
+    &-btn {
+      position: relative;
+      gap: 12px;
+      padding: 8px 18px 8px 14px;
+      font-weight: 500;
+      font-size: 16px;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-btn:hover>&-hamburger>span:nth-child(4) {
+      left: 0;
+    }
+
+    &-hamburger {
+      pointer-events: none;
+    }
+  }
+
+  &__search {
+    &-wrap {
+      margin-right: auto;
+      width: 100%;
+
+      @include tablet {
+        order: 3;
+      }
+    }
+  }
+
+  &__product-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__action {
+    &-btn {
+      gap: 10px;
+      line-height: 12px;
+      text-decoration: none;
+    }
+
+    &-icon {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__mobile {
+    position: relative;
+    z-index: 20;
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &-action {
+      color: $purple;
+
+      &-icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+    }
+  }
+
+  // .header__basket
+  &__basket {
+    &-wrap {
+      position: relative;
+    }
+  }
+
+  &__hamburger {
+    color: $purple;
+  }
+}

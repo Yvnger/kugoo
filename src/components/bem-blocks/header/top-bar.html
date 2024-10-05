@@ -1,0 +1,25 @@
+<div class="header__top-bar top-bar">
+  <div class="container">
+    <nav class="top-bar__nav">
+      <ul class="top-bar__nav-items">
+        @@loop('./top-bar-nav-item.html', [
+        { "anchor": "Сервис", "link": "javascript:void(0)" },
+        { "anchor": "Сотрудничество", "link": "javascript:void(0)" },
+        { "anchor": "Заказать звонок", "link": "javascript:void(0)" }
+        ])
+      </ul>
+    </nav>
+
+    <nav class="top-bar__social">
+      <ul class="top-bar__social-items">
+        @@loop('./top-bar-social-item.html', [
+        { "social": "viber", "link": "javascript:void(0)" },
+        { "social": "whatsapp", "link": "javascript:void(0)" },
+        { "social": "telegram", "link": "javascript:void(0)" },
+        ])
+      </ul>
+    </nav>
+
+    @@include('./phone-block.html')
+  </div>
+</div>

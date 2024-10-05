@@ -1,0 +1,11 @@
+<nav class="navbar-mobile">
+  <ul class="navbar-mobile__list">
+    @@loop('./navbar-mobile-item.html', [
+    {"title": "Главная", "icon_id": "home"},
+    {"title": "Каталог", "icon_id": "search"},
+    {"title": "Корзина", "icon_id": "basket_outline"},
+    {"title": "Избранное", "icon_id": "favorite_outline"},
+    {"title": "Сравнить", "icon_id": "compare"},
+    ])
+  </ul>
+</nav>

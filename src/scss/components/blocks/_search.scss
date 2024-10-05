@@ -1,0 +1,67 @@
+.search {
+  display: flex;
+  border: 1px solid $purple;
+  border-radius: 5px;
+  width: 100%;
+  overflow: hidden;
+
+  @include tablet {
+    border: none;
+    background-color: $background;
+  }
+
+  &__path {
+    &-wrap {
+      padding: 2px;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__input {
+    @include resetInput;
+    width: 100%;
+    padding-left: 18px;
+    font-size: 14px;
+    color: $black;
+
+    &::placeholder {
+      color: $gray-600;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include tablet {
+      padding: 10px 8px;
+      font-size: 12px;
+    }
+  }
+
+  &__submit {
+    @include resetButton;
+    padding: 11px;
+    background-color: $purple;
+    cursor: pointer;
+
+    @include tablet {
+      background-color: transparent;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: $white;
+
+    @include tablet {
+      width: 12px;
+      height: 12px;
+      fill: $gray-600;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div class="top-bar__phone-block phone-block">
+  <a href="javascript:void(0)" class="phone-block__phone">+7 (800) 505-54-61</a>
+
+  <button class="phone-block__toggle js-phone-block-toggle" aria-label="Дополнительные телефоны">
+    <svg class="phone-block__toggle-icon" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#plus"></use>
+    </svg>
+  </button>
+
+  <div id="phone-list" class="phone-block__list-wrap">
+    <ul class="phone-block__list">
+      @@loop('./phone-block-item.html', [
+      {
+      'label': 'Сервисный центр',
+      'number': '+ 7 (499) 350 76 92',
+      'schedule': ''
+      },
+      {
+      'label': 'Оптовый отдел',
+      'number': '+7 (499) 281-64-52',
+      'schedule': 'пн-сб 10:00 - 19:00'
+      },
+      {
+      'label': 'Отдел рекламации и претензий',
+      'number': '+7 (499) 350-76-92',
+      'schedule': 'ср-вс с 10:00 до 19:00'
+      }
+      ])
+    </ul>
+  </div>
+</div>

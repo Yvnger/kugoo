@@ -1,0 +1,90 @@
+.btn {
+  @include resetButton;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-family: $heading-font-family;
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+
+  @include transition(background-color, border-color, color);
+
+  // Модификаторы для цвета
+  &--purple {
+    background-color: $purple;
+    color: $white;
+
+    @include hover {
+      background-color: #8185f9;
+    }
+
+    &.btn--outline {
+      background-color: transparent;
+      border-color: $purple;
+      color: $purple;
+
+      @include hover {
+        background-color: $purple;
+        color: $white;
+      }
+    }
+  }
+
+  &--orange {
+    background-color: $orange;
+    color: $white;
+
+    @include hover {
+      background-color: #fab836;
+    }
+
+    &.btn--outline {
+      background-color: transparent;
+      border-color: $orange;
+      color: $orange;
+
+      @include hover {
+        background-color: $orange;
+        color: $white;
+      }
+    }
+  }
+
+  &--gray {
+    border-color: $background;
+    background-color: $background;
+    color: $gray-600;
+
+    @include hover {
+      border-color: $purple;
+      background-color: $white;
+      color: $purple;
+    }
+  }
+
+  &--white {
+    border-color: $white;
+    background-color: $white;
+    color: $black;
+
+    @include hover {
+      border-color: $background;
+      background-color: $background;
+    }
+  }
+
+  // Модификаторы по размеру
+  &--lg {
+    padding: 15px 25px;
+    font-size: 16px;
+  }
+
+  // Модификаторы по оформлению
+  &--rounded {
+    padding: 10px;
+    border-radius: 100px;
+  }
+}

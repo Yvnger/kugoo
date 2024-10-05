@@ -1,10 +1,14 @@
 .container {
-    margin: 0 auto;
-    padding: 0 $container-padding;
-    max-width: $container-width + ($container-padding * 2);
-    width: 100%;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  max-width: $container-width + ($container-padding * 2);
+  width: 100%;
 
-    @include mobile-sm {
-        padding: 0 $container-padding-mobile-sm;
-    }
+  @include tablet {
+    padding: 0 $container-padding-tablet;
+  }
+
+  @include mobile-sm {
+    padding: 0 $container-padding-mobile-sm;
+  }
 }

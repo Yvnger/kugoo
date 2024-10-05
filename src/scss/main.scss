@@ -6,3 +6,23 @@
 @import "base/typography";
 @import "base/grid";
 @import "base/utils";
+
+
+// Elements
+@import "components/elements/button";
+@import "components/elements/hamburger";
+
+// Blocks
+@import "components/blocks/social";
+@import "components/blocks/phone-block";
+@import "components/blocks/search";
+
+// Sections
+@import "components/sections/header";
+@import "components/sections/top-bar";
+@import "components/sections/navbar";
+@import "components/sections/basket";
+@import "components/sections/catalog";
+
+// Plugins
+@import '/node_modules/simplebar/dist/simplebar.min.css';

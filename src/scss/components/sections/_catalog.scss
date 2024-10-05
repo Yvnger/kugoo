@@ -1,0 +1,115 @@
+.catalog {
+
+  // .catalog-dropdown
+  &-dropdown {
+    position: relative;
+
+    &__wrap {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 650px;
+      padding-top: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      @include transition(opacity, transform);
+    }
+
+    &:hover>&__wrap {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    &:hover>&__btn {
+      background-color: #8185f9;
+
+      .hamburger {
+        span:nth-child(4) {
+          left: 0;
+        }
+      }
+    }
+
+    &__body {
+      display: flex;
+      border-radius: 5px;
+      background-color: $white;
+      box-shadow: 0 10px 30px 0 rgba(111, 115, 238, 0.1);
+    }
+
+    &__categories {
+      padding: 10px;
+
+      &-list {
+        @include resetList;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 34px 28px 24px;
+        border-radius: 5px;
+        background-color: $background;
+      }
+
+      &-item {
+        &-link {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 500;
+          font-size: 16px;
+          text-decoration: none;
+          color: $black;
+          @include transition(color);
+
+          @include hover {
+            color: $purple;
+          }
+        }
+
+        &-icon {
+          display: block;
+          width: 16px;
+          height: 16px;
+          fill: currentColor;
+        }
+      }
+    }
+
+    &__attributes {
+      display: flex;
+      gap: 60px;
+      padding: 20px 30px 34px 30px;
+
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      &-title {
+        font-weight: 500;
+        font-size: 16px;
+        color: $black;
+      }
+
+      &-list {
+        @include resetList;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      &-item {
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      &-link {
+        text-decoration: none;
+        color: $gray-600;
+      }
+    }
+  }
+}

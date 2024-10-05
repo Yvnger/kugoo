@@ -1,12 +1,21 @@
-// Colors
-$blue: #008dd1;
-$cyan: #00ffff;
-$purple: #a0a8f1;
-$gray: #c2c1ca;
-$red: #d10000;
-$rose: #d10096;
-$orange: #ffc700;
-$green: #75d100;
+/**
+ *  Colors
+ */
+$purple: #6f73ee;
+$black: #282739;
+$gray-200: #eaebed;
+$gray-600: #5d6c7b;
+$white: #ffffff;
+$background: #f4f7fb;
+$red: #ee685f;
+$orange: #f3a712;
+$green: #75d14a;
+
+// Social
+$viber-color: #8e24aa;
+$whatsapp-color: #4caf50;
+$telegram-color: #039be5;
+
 
 // Font
 $base-font-family: "Roboto", sans-serif;
@@ -18,7 +27,7 @@ $transition-function: ease-in-out;
 
 $container-width: 1380px;
 $container-padding: 30px;
-$container-padding-mobile: 10px;
+$container-padding-tablet: 15px;
 $container-padding-mobile-sm: 8px;
 
 // Breakpoints

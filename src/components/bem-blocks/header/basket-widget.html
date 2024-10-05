@@ -1,0 +1,74 @@
+<div class="header__basket basket-widget">
+  <a href="javascript:void(0)" class="btn btn--rounded btn--white header__action-btn basket-widget__link">
+    <svg class="header__action-icon" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#basket_filled"></use>
+    </svg>
+
+    Корзина
+  </a>
+
+  <div class="basket-widget__wrap">
+    <div class="basket-widget__body">
+      <div class="basket-widget__heading">
+        <h2 class="basket-widget__title">В вашей корзине</h2>
+        <span class="basket-widget__count">2 товара</span>
+      </div>
+
+      <div class="basket-widget__content js-basket-widget-content">
+        <ul class="basket-widget__list">
+          @@loop('./basket-widget-item.html', [
+          {
+          "title": "Kugoo Kirin M4",
+          "price": "29 900",
+          "qty":"1"
+          },
+          {
+          "title": "Kugoo Kirin M4",
+          "price": "29 900",
+          "qty":"1"
+          },
+          {
+          "title": "Kugoo Kirin M4",
+          "price": "29 900",
+          "qty":"1"
+          },
+          {
+          "title": "Kugoo Kirin M4",
+          "price": "29 900",
+          "qty":"1"
+          },
+          {
+          "title": "Kugoo Kirin M4",
+          "price": "29 900",
+          "qty":"1"
+          },
+          {
+          "title": "Kugoo Kirin M4",
+          "price": "29 900",
+          "qty":"1"
+          },
+          {
+          "title": "Kugoo Kirin M4",
+          "price": "29 900",
+          "qty":"1"
+          },
+          {
+          "title": "Kugoo Kirin M4",
+          "price": "29 900",
+          "qty":"1"
+          },
+          ])
+        </ul>
+      </div>
+
+      <div class="basket-widget__footer">
+        <div class="basket-widget__total">
+          <span class="basket-widget__total-label">Сумма:</span>
+          <span class="basket-widget__total-value">59 800 ₽</span>
+        </div>
+
+        <button class="btn btn--fill btn--purple">Оформить заказ</button>
+      </div>
+    </div>
+  </div>
+</div>

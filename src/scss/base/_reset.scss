@@ -8,10 +8,10 @@ html {
   min-width: 320px;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-size: $base-font-size;
 }
 
 body {
+  min-height: 100vh;
   overflow-x: hidden;
 }
 

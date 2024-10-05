@@ -1,0 +1,172 @@
+.basket {
+
+  // .basket-widget
+  &-widget {
+    position: relative;
+
+    &__wrap {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding-top: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      @include transition(opacity, transform);
+    }
+
+    &:hover>&__link {
+      border-color: $background;
+      background-color: $background;
+    }
+
+    &:hover>&__wrap {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    &__body {
+      width: 300px;
+      border-radius: 5px;
+      box-shadow: 0 10px 30px 0 rgba(111, 115, 238, 0.1);
+      background-color: $white;
+      overflow: hidden;
+    }
+
+    &__heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background-color: $background;
+    }
+
+    &__title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: $black;
+    }
+
+    &__count {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      color: $gray-600;
+    }
+
+    &__content {
+      max-height: 200px;
+      overflow-y: scroll
+    }
+
+    &__list {
+      @include resetList;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: $white;
+      box-shadow: 0 -4px 50px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &__total {
+      display: flex;
+      flex-direction: column;
+
+      &-label {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        color: $gray-600;
+      }
+
+      &-value {
+        font-weight: 500;
+        font-size: 18px;
+        color: $black;
+      }
+    }
+
+    // .basket-widget-item
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 15px 20px 14px;
+      border-bottom: 1px solid $gray-200;
+
+      &__thumb {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+        &-wrap {
+          display: block;
+          width: 49px;
+          height: 49px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-right: auto;
+      }
+
+      &__title {
+        margin: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+
+        &-link {
+          text-decoration: none;
+          color: $black;
+        }
+      }
+
+      &__details {
+        display: flex;
+        gap: 13px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        color: $black;
+      }
+
+      // &__price {}
+
+      // &__quantity {}
+
+      &__remove {
+        @include resetButton;
+        cursor: pointer;
+        color: $gray-600;
+        @include transition(color);
+
+        @include hover {
+          color: $red;
+        }
+
+        &-icon {
+          display: block;
+          width: 20px;
+          height: 20px;
+          fill: currentColor;
+        }
+      }
+    }
+  }
+}

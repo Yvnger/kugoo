@@ -1,0 +1,22 @@
+.social {
+  fill: $gray-600;
+  @include transition(fill);
+
+  &--viber {
+    @include hover {
+      fill: $viber-color;
+    }
+  }
+
+  &--whatsapp {
+    @include hover {
+      fill: $whatsapp-color;
+    }
+  }
+
+  &--telegram {
+    @include hover {
+      fill: $telegram-color;
+    }
+  }
+}
