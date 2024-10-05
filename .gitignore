@@ -5,3 +5,4 @@ dist
 package-lock.json
 src/scss/_local-fonts.scss
 src/img/*.webp
+src/img/sprite.svg
