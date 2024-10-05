@@ -1,7 +1,7 @@
-const header: HTMLElement | null = document.getElementById('header');
+import { header, headerOpenedClass } from "./header";
+
 const navbarToggle: HTMLElement | null = document.querySelector('.js-navbar-toggle');
 const navbar: HTMLElement | null = document.querySelector('.js-navbar');
-const headerOpenedClass: string = 'header--opened';
 const navbarOpenedClass: string = 'navbar--opened';
 const hamburgerOpenedClass: string = 'hamburger--opened';
 
